@@ -23,6 +23,9 @@ red_button.pack()
 green_button.pack()
 yellow_button.pack()
 
+
+red_button.grid(row=0,column=2)
+
 # Start the GUI event loop
 root.mainloop()
 
