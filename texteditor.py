@@ -1,21 +1,17 @@
- from tkinter import *
-from tkmacosx import Button
+from tkinter import *
+from tkinter import ttk
+from tkinter import scrolledtext
 
 root = Tk()
-root.title("Text editor")
+root.title("text editor on BIDDY")
+root.geometry("300x300")
 
-root.geometry("150x350")
+text_area = scrolledtext.ScrolledText(root,
+                                      wrap = WORD,
+                                      width = 40,
+                                      height = 10,
+                                      font = ("Times New Roman",
+                                              15))
 
-
-#video being used https://www.youtube.com/watch?v=0WafQCaok6g
-main_frame = Frame(root)
-main_frame.pack(fill=BOTH, expand=1)
-
-my_canvas = Canvas(main_frame)
-my_canvas.pack(side=LEFT, fill=BOTH, expand=1)
-
-scrollbar = ttk.Scrollbar(main_frame, orient=VERTICAL, command=my_canvas.yview)
-scrollbar.pack(side=RIGHT, fill=Y)
-
-my_canvas.configure(yscrollcommand=scrollbar.set)
-my_canvas.bind('<Configure>',lambda e: my_canvas.configure(scrollregion = my_canvas.bbox("all")))
+text_area.pack()
+root.mainloop()
