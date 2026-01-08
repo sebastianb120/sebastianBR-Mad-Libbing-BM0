@@ -9,8 +9,7 @@ root.title("callbacks")
 root.geometry("300x200")
 
 
-red_button = Button(root, text="Change title", command=changeTitle)
-T = Text(root,height = 5, width = 52)
+
 
 def changeTitle():
 	root.title(T.get("1.0",END))
@@ -20,3 +19,6 @@ def Butt1():
 	b1.config("button 1 pressed")
 def Butt2():
 	b2.config("button 1 pressed")
+
+Button(root, text="Change title", command=changeTitle)
+T = Text(root,height = 5, width = 52)
