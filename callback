@@ -4,7 +4,7 @@ from tkinter import *
 import random
 from random import randint
 
-root = Tk()
+root = tk()
 root.title("callbacks")
 root.geometry("300x200")
 
