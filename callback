@@ -8,17 +8,13 @@ root = Tk()
 root.title("callbacks")
 root.geometry("300x200")
 
+T = Text(root,height = 5, width = 52)
 
-def changeTitle():
+def changeLabel1():
 	root.title(T.get("1.0",END))
 
+butt1 = Button(root, text="button 1", command=changeLabel1)
+butt1.grid(row=0, column=0)
 
-def Butt1():
-	b1.config("button 1 pressed")
-def Butt2():
-	b2.config("button 1 pressed")
-
-Button(root, text="Change title", command=changeTitle)
-T = Text(root,height = 5, width = 52)
 
 root.mainloop()
