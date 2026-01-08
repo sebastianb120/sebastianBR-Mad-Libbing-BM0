@@ -14,7 +14,7 @@ def changeLabel1():
 	root.title(T.get("1.0",END))
 def changeLabel2():
 	root.title(T.get("1.0",END))
-def changeLabel2():
+def changeLabel3():
 	root.title(T.get("1.0",END))
 
 butt1 = Button(root, text="button 1", command=changeLabel1)
