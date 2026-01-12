@@ -1,10 +1,10 @@
 
-import tkinter as Tk
+import tkinter as tk
 from tkinter import *
 import random
 from random import randint
 
-root = Tk()
+root = tk()
 root.title("callbacks")
 root.geometry("300x200")
 
@@ -22,9 +22,9 @@ butt2 = Button(root, text="button 2", command=changeLabel2)
 butt3 = Button(root, text="button 3", command=changeLabel3)
 
 
-Label1 = Tk.label(root, text="Unchanged")
-Label2 = Tk.label(root, text="Unchanged")
-Label3 = Tk.label(root, text="Unchanged")
+Label1 = tk.label(root, text="Unchanged")
+Label2 = tk.label(root, text="Unchanged")
+Label3 = tk.label(root, text="Unchanged")
 
 
 Label1.grid(row=0,column=3)
