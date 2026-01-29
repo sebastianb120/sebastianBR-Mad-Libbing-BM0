@@ -5,12 +5,17 @@ from tkinter import scrolledtext
 root = Tk()
 root.title("text editor on BIDDY")
 root.geometry("300x300")
-
-
-
 custom_font = ("Helvetica", 16, "bold")
+
+def opentext():
+  with open("demofile.txt", "r") as f:
+    content = f.read()
+    text_area.delete("1.0", END)
+    text_area.insert("1.0",content)
+
+
 def savetext():
-  text = scrolledtext.get("1.0", tk.END)
+  text = text_area.get("1.0", END)
   with open('demofile.txt', 'w') as f:
     f.write(text)
 
@@ -30,7 +35,7 @@ save = ttk.Button(
 save.place(x=25,y=175)
 
 
-openbutton = ttk.Button(root, width =1.5, text="open")
+openbutton = ttk.Button(root, width =1.5, text="open", command=opentext)
 openbutton.place(x = 225,y=175)
 
 text_area.pack()

@@ -11,14 +11,14 @@ root.geometry("300x200")
 T = Text(root,height = 5, width = 52)
 
 def changeRandom():
-	pass
+	#get random number 1-6 and assign each of those to a label/button and change text to "randomly picked"
 
 def changeLabel1():
-	root.title(T.get("1.0",END))
+	Label1.config(text="changed")
 def changeLabel2():
-	root.title(T.get("1.0",END))
+	Label2.config(text="changed")
 def changeLabel3():
-	root.title(T.get("1.0",END))
+	Label3.config(text="changed")
 
 butt1 = Button(root, text="button 1", command=changeLabel1)
 butt2 = Button(root, text="button 2", command=changeLabel2)
@@ -29,6 +29,8 @@ changerandom = Button(root, text="change random", command=changeRandom)
 Label1 = Label(root, text="Unchanged1")
 Label2 = Label(root, text="Unchanged2")
 Label3 = Label(root, text="Unchanged3")
+
+
 
 
 Label1.grid(row=0,column=2)
