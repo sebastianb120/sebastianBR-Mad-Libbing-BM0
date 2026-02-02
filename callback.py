@@ -4,6 +4,8 @@ from tkinter import *
 import random
 from random import randint
 
+
+SebastiansWillyNillyInteger = 0
 root = Tk()
 root.title("callbacks")
 root.geometry("300x200")
@@ -11,7 +13,19 @@ root.geometry("300x200")
 T = Text(root,height = 5, width = 52)
 
 def changeRandom():
-	#get random number 1-6 and assign each of those to a label/button and change text to "randomly picked"
+	SebastiansWillyNillyInteger = randint(1,6)
+	if SebastiansWillyNillyInteger == 1:
+		Label1.config(text="randomly picked")
+	if SebastiansWillyNillyInteger == 2:
+		Label2.config(text="randomly picked")
+	if SebastiansWillyNillyInteger == 3:
+		Label3.config(text="randomly picked")
+	if SebastiansWillyNillyInteger == 4:
+		butt1.config(text="randomly picked")
+	if SebastiansWillyNillyInteger == 5:
+		butt2.config(text="randomly picked")
+	if SebastiansWillyNillyInteger == 6:
+		butt3.config(text="randomly picked")
 
 def changeLabel1():
 	Label1.config(text="changed")
@@ -19,6 +33,13 @@ def changeLabel2():
 	Label2.config(text="changed")
 def changeLabel3():
 	Label3.config(text="changed")
+def changeButt1():
+	butt1.config(text="changed")
+def changeButt2():
+	butt2.config(text="changed")
+def changeButt3():
+	butt3.config(text="changed")
+
 
 butt1 = Button(root, text="button 1", command=changeLabel1)
 butt2 = Button(root, text="button 2", command=changeLabel2)
